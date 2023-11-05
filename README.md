@@ -1,6 +1,6 @@
 # GreenBond-dApp2
 
-UI for depositing and redeeming GreenBond shares with USDT on arbitrum.
+UI for depositing and redeeming GreenBond V2 shares with USDT on arbitrum.
 
 ## Running this project
 
