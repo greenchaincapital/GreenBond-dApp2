@@ -62,7 +62,6 @@ const Home: NextPage = () => {
     args: [
       depositValue.toString() == "" ? ethers.utils.parseUnits("0",6) : ethers.utils.parseUnits(depositValue.toString(),6),
       address,
-      ethers.utils.parseUnits(minimumReceiveLSDActual.toString(),6),
     ],
   });
 
@@ -170,7 +169,6 @@ const Home: NextPage = () => {
     args: [
       redeemValue.toString() == "" ? ethers.utils.parseUnits("0",6) : ethers.utils.parseUnits(redeemValue.toString(),6),
       address,
-      ethers.utils.parseUnits(minimumReceiveWMaticActual.toString(),6),
     ],
   });
 
