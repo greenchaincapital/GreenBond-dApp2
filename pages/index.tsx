@@ -351,12 +351,12 @@ const Home: NextPage = () => {
                 </div>
                 <button
                   className="btn btn-ghost btn-xs opacity-70"
-                  onClick={() => setRedeemValue(ethers.utils.formatEther(lsdBalance))}
+                  onClick={() => setRedeemValue(ethers.utils.formatUnits(lsdBalance,6))}
                 >
                   MAX
                 </button>
                 <span className="m-0 ml-0.5 mt-px text-sm opacity-50">
-                  Balance: {lsdBalance != undefined ? Number(ethers.utils.formatEther(lsdBalance)).toFixed(4) : "0"}
+                  Balance: {lsdBalance != undefined ? Number(ethers.utils.formatUnits(lsdBalance,6)).toFixed(4) : "0"}
                 </span>
               </div>
             </div>
@@ -384,7 +384,7 @@ const Home: NextPage = () => {
             </div>
             {!writeDisabled &&
             lsdAllowance != undefined &&
-            Number(redeemValue) > Number(ethers.utils.formatEther(lsdAllowance)) ? (
+            Number(redeemValue) > Number(ethers.utils.formatUnits(lsdAllowance, 6)) ? (
               <button className="btn btn-primary mt-4 w-full" onClick={w4}>
                 Approve
               </button>
@@ -396,7 +396,7 @@ const Home: NextPage = () => {
               onClick={w5}
               disabled={
                 writeDisabled ||
-                (lsdAllowance != undefined && Number(redeemValue) > Number(ethers.utils.formatEther(lsdAllowance)))
+                (lsdAllowance != undefined && Number(redeemValue) > Number(ethers.utils.formatUnits(lsdAllowance,6)))
               }
             >
               Redeem

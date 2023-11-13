@@ -22,7 +22,7 @@ const VaultStats: NextPage = () => {
   });
 
   const customFormatEther = (x: any) => {
-    const value = ethers.utils.formatEther(x);
+    const value = ethers.utils.formatUnits(x,6);
     const digits = parseInt(value).toString().length;
     if (digits >= 7) {
       return [value, Number(value).toFixed(0)];
@@ -32,8 +32,8 @@ const VaultStats: NextPage = () => {
   };
 
   const currentAmountPercentage = () => {
-    const base = Number(ethers.utils.formatEther(invested));
-    const profit = Number(ethers.utils.formatEther(currentAmount));
+    const base = Number(ethers.utils.formatUnits(invested,6));
+    const profit = Number(ethers.utils.formatUnits(currentAmount,6));
     return ((profit - base) * 100) / base;
   };
 
