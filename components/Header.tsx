@@ -2,7 +2,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Bars3Icon, BookOpenIcon, LinkIcon, HomeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
+import { ArrowPathIcon, Bars3Icon, BookOpenIcon, LinkIcon, HomeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
 import { RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -49,6 +49,12 @@ export const Header = () => {
         <NavLink href="https://bridge.arbitrum.io/">
           <LinkIcon className="h-4 w-4" />
           Bridge
+        </NavLink>
+      </li>
+      <li className="content-start">
+        <NavLink href="https://app.balancer.fi/#/arbitrum/swap">
+          <ArrowPathIcon className="h-4 w-4" />
+          Swap
         </NavLink>
       </li>
       <li className="content-start">
