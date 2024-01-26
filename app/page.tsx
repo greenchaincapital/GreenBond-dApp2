@@ -76,7 +76,7 @@ const Home: NextPage = () => {
 
   const customFormatEther = (x: any, dec: number = 6) => {
     const value = Number(x) / (10 ** dec);
-    const digits = parseInt(value).toString().length;
+    const digits = parseInt(value.toString()).toString().length;
     if (digits >= 7) {
       return [value, Number(value).toFixed(0)];
     } else {
