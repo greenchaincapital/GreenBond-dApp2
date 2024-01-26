@@ -88,8 +88,8 @@ const Home: NextPage = () => {
     // x = x.sub(x.mul(ethers.utils.parseUnits((slippage * 100).toString(),6)).div(ethers.utils.parseUnits("10000",6)));
     x = x * (10000n - BigInt(slippage * 100))/10000n;
     const data = customFormatEther(x);
-    setMinimumReceiveLSDActual(data[0]);
-    setMinimumReceiveLSD(data[1]);
+    setMinimumReceiveLSDActual(data[0].toString());
+    setMinimumReceiveLSD(String(data[1]));
   };
 
   const setCustomSlippage = (e: any) => {
@@ -178,8 +178,8 @@ const Home: NextPage = () => {
     // x = x.sub(x.mul(ethers.utils.parseUnits((slippage * 100).toString(),6)).div(ethers.utils.parseUnits("10000",6)));
     x = x * (10000n - BigInt(slippage * 100))/10000n;
     const data = customFormatEther(x,6);
-    setMinimumReceiveWMaticActual(data[0]);
-    setMinimumReceiveWMatic(data[1]);
+    setMinimumReceiveWMaticActual(data[0].toString());
+    setMinimumReceiveWMatic(String(data[1]));
   };
 
   return (
@@ -217,7 +217,7 @@ const Home: NextPage = () => {
                   className="input input-bordered input-primary grow min-w-0"
                   value={depositValue}
                   onChange={e => {
-                    setDepositValue(e.target.value);
+                    setDepositValue(Number(e.target.value));
                   }}
                 />
                 <div>
