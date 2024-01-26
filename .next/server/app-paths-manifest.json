@@ -1,0 +1,4 @@
+{
+  "/page": "app/page.js",
+  "/vault-stats/page": "app/vault-stats/page.js"
+}

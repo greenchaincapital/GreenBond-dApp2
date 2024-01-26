@@ -1,14 +1,17 @@
+"use client";
+
 import { useEffect } from "react";
-import { useDarkMode, useIsMounted } from "usehooks-ts";
+import { useIsMounted } from "usehooks-ts";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { useDarkMode } from "~~/hooks/scaffold-eth/useDarkMode";
 
 export const SwitchTheme = ({ className }: { className?: string }) => {
   const { isDarkMode, toggle } = useDarkMode();
   const isMounted = useIsMounted();
 
   useEffect(() => {
-    const doc = document.documentElement;
-    doc.setAttribute("data-theme", isDarkMode ? "scaffoldEthDark" : "scaffoldEth");
+    const body = document.body;
+    body.setAttribute("data-theme", isDarkMode ? "forest" : "lemonade");
   }, [isDarkMode]);
 
   return (
@@ -16,7 +19,7 @@ export const SwitchTheme = ({ className }: { className?: string }) => {
       <input
         id="theme-toggle"
         type="checkbox"
-        className="toggle toggle-primary bg-primary"
+        className="toggle toggle-primary bg-primary hover:bg-primary border-primary"
         onChange={toggle}
         checked={isDarkMode}
       />
