@@ -6,7 +6,8 @@ import Link from "next/link";
 import { useAccount, useNetwork } from "wagmi";
 import { usePathname } from "next/navigation";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
-import { ArrowPathIcon, BookOpenIcon, LinkIcon, HomeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
+import { ArrowPathIcon, BookOpenIcon, LinkIcon, HomeIcon, LockClosedIcon, ChartPieIcon, BanknotesIcon } from "@heroicons/react/24/solid";
+
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -25,9 +26,14 @@ export const menuLinks: HeaderMenuLink[] = [
     icon: <HomeIcon className="h-4 w-4" />,
   },
   {
-    label: "Vault Stats",
+    label: "Bond",
+    href: "/bond",
+    icon: <BanknotesIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Stats",
     href: "/vault-stats",
-    icon: <LockClosedIcon className="h-4 w-4" />,
+    icon: <ChartPieIcon className="h-4 w-4" />,
   },
   {
     label: "Bridge",
@@ -41,7 +47,7 @@ export const menuLinks: HeaderMenuLink[] = [
   },
   {
     label: "Docs",
-    href: "https://green-bond-v2.vercel.app/",
+    href: "/docs/overview",
     icon: <BookOpenIcon className="h-4 w-4" />,
   },
 ];

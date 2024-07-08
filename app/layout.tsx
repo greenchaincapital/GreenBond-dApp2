@@ -11,16 +11,16 @@ const imageUrl = `${baseUrl}/thumbnail.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Green Bond",
-    template: "%s | Green Bond",
+    default: "Green Chain",
+    template: "%s | Green Chain",
   },
-  description: "Decentralised Green Bond",
+  description: "Decentralised Green Energy",
   openGraph: {
     title: {
-      default: "Green Bond",
-      template: "%s | Green Bond",
+      default: "Green Chain",
+      template: "%s | Green Chain",
     },
-    description: "Decentralised Green Bond",
+    description: "Decentralised Green Energy",
     images: [
       {
         url: imageUrl,
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [imageUrl],
     title: {
-      default: "Green Bond",
-      template: "%s | Green Bond",
+      default: "Green Chain",
+      template: "%s | Green Chain",
     },
-    description: "Decentralised Green Bond",
+    description: "Decentralised Green Energy",
   },
   icons: {
     icon: [{ url: "/logo2-32.png", sizes: "32x32", type: "image/png" }],

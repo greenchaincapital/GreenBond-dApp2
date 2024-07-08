@@ -1,4 +1,6 @@
 {
+  "/not-found": "app/not-found.js",
+  "/docs/[slug]/page": "app/docs/[slug]/page.js",
   "/page": "app/page.js",
-  "/vault-stats/page": "app/vault-stats/page.js"
+  "/bond/page": "app/bond/page.js"
 }
